@@ -1,0 +1,49 @@
+\documentclass{exam}
+    \usepackage{matlab-prettifier}
+    \usepackage[landscape,twocolumn]{geometry}
+    \usepackage[small]{titlesec}
+    \usepackage{enumitem}
+    \usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+    \setlist[description]{nosep,labelindent=1em}
+    
+    \lstset{style=Matlab-editor,aboveskip=0.6pt,belowskip=-0.4pt}
+    
+    %Reduce spacing for subsection
+    \titlespacing\subsection{0pt}{-1pt}{-1pt}
+    %Header config
+    \pagestyle{head}
+    \extrafootheight{-.75in}
+    \header{INF-135}{Principes fondamentaux, structures de contrôles conditionnelles}{Exercices 1}
+    
+    \qformat{\textbf{Exercice \thequestion}\quad \thequestiontitle\hfill}
+    \begin{document}
+    \begin{questions}
+        \titledquestion{Allo monde}
+        \input{./source/E1AlloMonde.tex}
+        \titledquestion{Horaire}
+        \input{./source/E2Horaire.tex}          
+        \titledquestion{Nombre double}
+        \input{./source/E3DoubleDuNombre.tex}
+        \titledquestion{Nombre carré}
+        \input{./source/E4CarreDuNombre.tex}
+        \titledquestion{Coûts d’achats avec taxes}
+        \input{./source/E5CoutAvecTaxes.tex}
+        \titledquestion{Nom et prénom}
+        \input{./source/E6NomEtPrenom.tex}
+        \titledquestion{Multiplication de deux nombres}
+        \input{./source/E7MultiplieDeuxNombres.tex}
+        \titledquestion{Positif, négatif ou nul}
+        \input{./source/E8PositifNegatifNul.tex}
+        \titledquestion{Minimum}
+        \input{./source/E9MinimumEntreDeux.tex}
+        \titledquestion{Quadrant cartésien}
+        \input{./source/E10QuadrantCartesien.tex}
+        \titledquestion{IMC}
+        \input{./source/E11IMC.tex}
+        \titledquestion{Plus petit de trois}
+        \input{./source/E12MinimumEntreTrois.tex}
+        \titledquestion{Menu}
+        \input{./source/E13Menu.tex}
+        
+    \end{questions}
+\end{document}

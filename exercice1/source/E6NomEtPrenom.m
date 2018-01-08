@@ -1,0 +1,15 @@
+% Demande à l’utilisateur de saisir le nom suivi du prénom de l'utilisateur
+% (avec deux saisis disctinctes). Le script affiche les message suivant
+% avec le nom et prénom de l'utilisateur "Bonjour PRENOM NOM!" suivi d'un
+% saut de ligne.
+
+% Vide la fenêtre de commande et la mémoire.
+clear
+clc
+
+% Saisit le prénom et le nom.
+prenom = input('Veuillez entrer votre prénom: ', 's');
+nom = input('Veuillez entrer votre nom: ', 's');
+
+% Affiche la saluation.
+fprintf('Bonjour %s %s!\n', prenom, nom);

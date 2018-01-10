@@ -11,4 +11,3 @@ nbSaisi = input('Entrez un nombre: ');
 
 % Affiche le carré du nombre saisi.
 fprintf('Carré du nombre : %g\n',nbSaisi^2)
-

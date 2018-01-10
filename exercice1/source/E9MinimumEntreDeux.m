@@ -19,4 +19,3 @@ end
 
 % Affiche le plus petit des deux nombres.
 fprintf('Plus petit : %g\n', min)
-

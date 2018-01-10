@@ -30,4 +30,3 @@ end
 
 % Affiche la catégorie de l'IMC.
 fprintf('Catégorie IMC : %s\n', categorie);
-

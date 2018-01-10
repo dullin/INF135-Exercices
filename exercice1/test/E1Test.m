@@ -7,7 +7,7 @@ diary('on')
 E1AlloMonde
 diary('off')
 text = fileread('diary');
-expected = ['Allo monde!' newline];
+expected = ['Allo monde !' newline];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Expected : %s Got: %s',expected, text);
 end

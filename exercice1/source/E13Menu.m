@@ -66,4 +66,3 @@ switch choix_utilisateur
     otherwise
         fprintf('Choix invalide.\n');
 end
-

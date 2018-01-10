@@ -45,7 +45,7 @@ diary('on')
 E12MinimumEntreTrois
 diary('off')
 text = fileread('diary');
-expected = ['Plus petit : 45' newline 'Il y a eu égalité.' newline];
+expected = ['Plus petit : 45' newline 'Il y a eu égalité .' newline];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[45, 45, 90]',expected, text);
 end

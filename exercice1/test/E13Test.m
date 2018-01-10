@@ -9,7 +9,7 @@ diary('on')
 E13Menu
 diary('off')
 text = fileread('diary');
-expected = [START_STRING, 'Allo monde!' newline];
+expected = [START_STRING, 'Allo monde !' newline];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','1',expected, text);
 end
@@ -21,7 +21,7 @@ diary('on')
 E13Menu
 diary('off')
 text = fileread('diary');
-expected = [START_STRING, 'Choix invalide.' newline];
+expected = [START_STRING, 'Choix invalide .' newline];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','53',expected, text);
 end

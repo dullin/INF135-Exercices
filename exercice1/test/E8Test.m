@@ -9,7 +9,7 @@ diary('on')
 E8PositifNegatifNul
 diary('off')
 text = fileread('diary');
-expected = ['Le nombre est positif.' newline];
+expected = ['Le nombre est positif .' newline];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','3',expected, text);
 end
@@ -21,7 +21,7 @@ diary('on')
 E8PositifNegatifNul
 diary('off')
 text = fileread('diary');
-expected = ['Le nombre est positif.' newline];
+expected = ['Le nombre est positif .' newline];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','2.7',expected, text);
 end
@@ -33,7 +33,7 @@ diary('on')
 E8PositifNegatifNul
 diary('off')
 text = fileread('diary');
-expected = ['Le nombre est négatif.' newline];
+expected = ['Le nombre est négatif .' newline];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','-4',expected, text);
 end
@@ -45,7 +45,7 @@ diary('on')
 E8PositifNegatifNul
 diary('off')
 text = fileread('diary');
-expected = ['Le nombre est négatif.' newline];
+expected = ['Le nombre est négatif .' newline];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[10,0]',expected, text);
 end
@@ -57,7 +57,7 @@ diary('on')
 E8PositifNegatifNul
 diary('off')
 text = fileread('diary');
-expected = ['Le nombre est nul.' newline];
+expected = ['Le nombre est nul .' newline];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[10,0]',expected, text);
 end

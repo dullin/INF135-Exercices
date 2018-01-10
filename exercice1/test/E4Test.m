@@ -74,4 +74,3 @@ if exist('diary', 'file')
     delete('diary');
 end
 end
-

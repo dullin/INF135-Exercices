@@ -9,11 +9,11 @@
 clear
 clc
 
-%Note : Les définitions de constantes se retrouve après le clear sinon ces
-%dernières seront effacées.
+% Note : Les définitions de constantes se retrouve après le clear sinon ces
+% dernières seront effacées.
 
-%Taux de taxes
-TAXES = 0.13;
+% Taux de la taxe de vente.
+TAUX_TAXES = 0.13;
 
 % Saisit le nombre d'articles à acheter et le prix de l'article.
 nArticle = input('Entrez le nombre d''article à acheter: ');
@@ -22,4 +22,4 @@ prixArticle = input('Entrez le prix de l''article à acheter: ');
 % Affiche le prix à payer.
 % Note : Le .2 dans %.2f permet de limiter le nombre de décimales à
 % afficher.
-fprintf('Prix total : %.2f\n', nArticle * prixArticle * (1+TAXES))
+fprintf('Prix total : %.2f\n', nArticle * prixArticle * (1+TAUX_TAXES))

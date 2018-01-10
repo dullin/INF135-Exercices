@@ -10,7 +10,7 @@ E11IMC
 diary('off')
 text = fileread('diary');
 expected = ['Catégorie IMC : normale' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[68, 1.65]',expected, text);
 end
 
@@ -22,7 +22,7 @@ E11IMC
 diary('off')
 text = fileread('diary');
 expected = ['Catégorie IMC : maigre' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[53, 1.78]',expected, text);
 end
 
@@ -34,7 +34,7 @@ E11IMC
 diary('off')
 text = fileread('diary');
 expected = ['Catégorie IMC : obèse' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[105, 1.78]',expected, text);
 end
 
@@ -46,8 +46,8 @@ if exist('diary', 'file')
     delete('diary');
 end
 %Clean global
-global inputOut;
-clear inputOut;
+clearvars -global inputOut
+clear input;
 end
 
 function teardownOnce(testCase)  % do not change function name

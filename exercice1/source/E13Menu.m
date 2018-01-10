@@ -13,10 +13,11 @@
 clear
 clc
 
-% Affiche le menu. Note : Les points de suspensions ne fonctionne pas
-% habituellement à l'intérieur d'une chaine de caractères. Il faut utiliser
-% les crochets [ ] avec les chaines délimités par des virgules pour avoir
-% une chaine sur plusieurs lignes.
+% Affiche le menu. 
+% Note : Les points de suspensions ne fonctionne pas habituellement à
+% l'intérieur d'une chaine de caractères. Il faut utiliser les crochets [ ]
+% avec les chaines délimités par des virgules pour avoir une chaine sur
+% plusieurs lignes.
 fprintf(['Quel programme souhaitez-vous appeler?\n', ...
         '1 - E1AlloMonde\n', ...
         '2 - E2Horaire\n', ...
@@ -31,7 +32,7 @@ fprintf(['Quel programme souhaitez-vous appeler?\n', ...
         '11 - E11IMC\n' , ...
         '12 - E12MinimumEntreTrois\n'] );
 
-% Saisit de la sélection de l'utilisateur.
+% Saisit la sélection de l'utilisateur.
 choix_utilisateur = input('Choix : ');
 
 % Appelle le bon script. Si la sélection est invalide, affiche un message

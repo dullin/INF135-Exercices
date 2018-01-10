@@ -10,7 +10,7 @@ E7MultiplieDeuxNombres
 diary('off')
 text = fileread('diary');
 expected = ['3 x 4 = 12' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[3,4]',expected, text);
 end
 
@@ -22,7 +22,7 @@ E7MultiplieDeuxNombres
 diary('off')
 text = fileread('diary');
 expected = ['1.5 x 2.7 = 4.05' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[1.5,2.7]',expected, text);
 end
 
@@ -34,7 +34,7 @@ E7MultiplieDeuxNombres
 diary('off')
 text = fileread('diary');
 expected = ['10 x 0 = 0' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[10,0]',expected, text);
 end
 
@@ -47,8 +47,8 @@ if exist('diary', 'file')
     delete('diary');
 end
 %Clean global
-global inputOut;
-clear inputOut;
+clearvars -global inputOut
+clear input;
 end
 
 function teardownOnce(testCase)  % do not change function name

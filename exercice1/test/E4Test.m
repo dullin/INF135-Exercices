@@ -10,7 +10,7 @@ E4CarreDuNombre
 diary('off')
 text = fileread('diary');
 expected = ['Carré du nombre : 100' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s',10,expected, text);
 end
 
@@ -22,7 +22,7 @@ E4CarreDuNombre
 diary('off')
 text = fileread('diary');
 expected = ['Carré du nombre : 225' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s',-15,expected, text);
 end
 
@@ -34,7 +34,7 @@ E4CarreDuNombre
 diary('off')
 text = fileread('diary');
 expected = ['Carré du nombre : 0' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s',0,expected, text);
 end
 
@@ -46,7 +46,7 @@ E4CarreDuNombre
 diary('off')
 text = fileread('diary');
 expected = ['Carré du nombre : 0.49' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s',0.7,expected, text);
 end
 
@@ -58,8 +58,8 @@ if exist('diary', 'file')
     delete('diary');
 end
 %Clean global
-global inputOut;
-clear inputOut;
+clearvars -global inputOut
+clear input;
 end
 
 function teardownOnce(testCase)  % do not change function name

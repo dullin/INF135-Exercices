@@ -7,7 +7,7 @@
 clear
 clc
 
-% Saisit du nombre.
+% Saisit le nombre.
 nbSaisi = input('Entrez un nombre: ');
 
 % Test la polarité du nombre et affiche le résultat.

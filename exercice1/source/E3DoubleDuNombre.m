@@ -6,8 +6,8 @@
 clc
 clear
 
-% Saisis du nombre.
+% Saisit le nombre.
 nbSaisi = input('Entrez un nombre: ');
 
-%Affiche le double du nombre saisie
+% Affiche le double du nombre saisi.
 fprintf('Double du nombre : %g\n', 2 * nbSaisi)

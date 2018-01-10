@@ -8,8 +8,8 @@ clear
 clc
 
 % Saisit le prénom et le nom.
-prenom = input('Veuillez entrer votre prénom: ', 's');
 nom = input('Veuillez entrer votre nom: ', 's');
+prenom = input('Veuillez entrer votre prénom: ', 's');
 
 % Affiche la saluation.
 fprintf('Bonjour %s %s!\n', prenom, nom);

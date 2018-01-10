@@ -9,8 +9,8 @@ diary('on')
 E6NomEtPrenom
 diary('off')
 text = fileread('diary');
-expected = ['Bonjour Bob George!' newline];
-cmp = strcmp(text,expected);
+expected = ['Bonjour George Bob !' newline];
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','{''Bob'', ''''}',expected, text);
 end
 
@@ -22,7 +22,7 @@ E6NomEtPrenom
 diary('off')
 text = fileread('diary');
 expected = ['Bonjour Roger !' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s','{''Roger'', ''''}',expected, text);
 end
 
@@ -34,7 +34,7 @@ E6NomEtPrenom
 diary('off')
 text = fileread('diary');
 expected = ['Bonjour  !' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s','{'''',''''}',expected, text);
 end
 
@@ -47,8 +47,8 @@ if exist('diary', 'file')
     delete('diary');
 end
 %Clean global
-global inputOut;
-clear inputOut;
+clearvars -global inputOut
+clear input;
 end
 
 function teardownOnce(testCase)  % do not change function name

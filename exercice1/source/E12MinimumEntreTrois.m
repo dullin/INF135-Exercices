@@ -8,7 +8,7 @@
 clear
 clc
 
-% Saisit des trois nombres.
+% Saisit les trois nombres.
 nb1 = input('Entrez un nombre: ');
 nb2 = input('Entrez un autre nombre: ');
 nb3 = input('Entrez un autre nombre: ');
@@ -37,7 +37,7 @@ elseif petit == nb3
     estEgal = true;
 end
 
-% Affiche notre résultat et notre égalité possible.
+% Affiche le résultat et notre égalité possible.
 fprintf('Plus petit : %g\n', petit)
 if estEgal
     fprintf('Il y a eu égalité.\n')

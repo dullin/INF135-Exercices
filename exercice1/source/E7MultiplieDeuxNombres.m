@@ -10,7 +10,7 @@ clc
 operande1 = input('Veuillez entrer un premier nombre: ');
 operande2 = input('Veuillez entrer un second nombre: ');
 
-% On affiche le produit.
+% Affiche le produit.
 % Note: Les points de suspension (...) permet de poursuivre l'écriture
 % d'une instruction sur les lignes suivantes.
 fprintf('%g x %g = %g\n', ...

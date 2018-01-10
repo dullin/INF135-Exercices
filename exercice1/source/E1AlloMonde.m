@@ -5,4 +5,4 @@
 clc
 
 % Affiche le message et on saute une ligne.
-fprintf('Allo tout le monde!\n')
+fprintf('Allo monde!\n')

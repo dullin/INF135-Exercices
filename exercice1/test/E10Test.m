@@ -10,7 +10,7 @@ E10QuadrantCartesien
 diary('off')
 text = fileread('diary');
 expected = ['(3, 5) est dans le quadrant : I.' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[3,5]',expected, text);
 end
 
@@ -22,7 +22,7 @@ E10QuadrantCartesien
 diary('off')
 text = fileread('diary');
 expected = ['(-12, 7) est dans le quadrant : II.' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[-12, 7]',expected, text);
 end
 
@@ -34,7 +34,7 @@ E10QuadrantCartesien
 diary('off')
 text = fileread('diary');
 expected = ['(-5.5, -9) est dans le quadrant : III.' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[-5.5, -9]',expected, text);
 end
 
@@ -46,7 +46,7 @@ E10QuadrantCartesien
 diary('off')
 text = fileread('diary');
 expected = ['(4, -12) est dans le quadrant : IV.' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[4, -12]',expected, text);
 end
 
@@ -58,8 +58,8 @@ if exist('diary', 'file')
     delete('diary');
 end
 %Clean global
-global inputOut;
-clear inputOut;
+clearvars -global inputOut
+clear input;
 end
 
 function teardownOnce(testCase)  % do not change function name

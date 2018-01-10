@@ -9,8 +9,8 @@ diary('on')
 E13Menu
 diary('off')
 text = fileread('diary');
-expected = [START_STRING, 'Allo tout le monde!' newline];
-cmp = strcmp(text,expected);
+expected = [START_STRING, 'Allo monde!' newline];
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','1',expected, text);
 end
 
@@ -22,7 +22,7 @@ E13Menu
 diary('off')
 text = fileread('diary');
 expected = [START_STRING, 'Choix invalide.' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','53',expected, text);
 end
 
@@ -34,7 +34,7 @@ E13Menu
 diary('off')
 text = fileread('diary');
 expected = [START_STRING '2 x 5 = 10' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[7, 2, 5]',expected, text);
 end
 
@@ -46,8 +46,8 @@ if exist('diary', 'file')
     delete('diary');
 end
 %Clean global
-global inputOut;
-clear inputOut;
+clearvars -global inputOut
+clear input;
 end
 
 function teardownOnce(testCase)  % do not change function name

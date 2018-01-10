@@ -6,9 +6,9 @@
 clear
 clc
 
-% Saisit du nombre.
+% Saisit le nombre.
 nbSaisi = input('Entrez un nombre: ');
 
-%Affiche le carré du nombre saisit.
+% Affiche le carré du nombre saisi.
 fprintf('Carré du nombre : %g\n',nbSaisi^2)
 

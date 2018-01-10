@@ -3,8 +3,6 @@ tests = functiontests(localfunctions);
 end
 
 function test1(testCase)
-global inputOut;
-inputOut = 10;
 diary('on')
 E2Horaire
 diary('off')
@@ -13,27 +11,32 @@ expected = ['Horaire:' newline ...
     '7h00 - déjeuner' newline ...
     '12h00 - diner' newline ...
     '17h00 - souper' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Expected : %s Got: %s',expected, text);
 end
 
-function setupOnce(testCase)
-addpath('../')
+function setupOnce(testCase)  % do not change function name
+% set a new path, for example
+warning('off','MATLAB:dispatcher:nameConflict')
+addpath('stubs','../')
 if exist('diary', 'file')
     delete('diary');
 end
 %Clean global
-global inputOut;
-clear inputOut;
+clearvars -global inputOut
+clear input;
 end
 
-function teardownOnce(testCase)
-rmpath('../')
+function teardownOnce(testCase)  % do not change function name
+% change back to original path, for example
+rmpath('stubs', '../')
 warning('on','MATLAB:dispatcher:nameConflict')
 end
 
-function teardown(testCase)
+function teardown(testCase)  % do not change function name
+% close figure, for example
 if exist('diary', 'file')
     delete('diary');
 end
 end
+

@@ -10,7 +10,7 @@ E5CoutAvecTaxes
 diary('off')
 text = fileread('diary');
 expected = ['Prix total : 1.13' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[1, 1]',expected, text);
 end
 
@@ -22,7 +22,7 @@ E5CoutAvecTaxes
 diary('off')
 text = fileread('diary');
 expected = ['Prix total : 27.66' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s','[2, 12.24]',expected, text);
 end
 
@@ -34,7 +34,7 @@ E5CoutAvecTaxes
 diary('off')
 text = fileread('diary');
 expected = ['Prix total : 0.00' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s','[0, 0]',expected, text);
 end
 
@@ -47,8 +47,8 @@ if exist('diary', 'file')
     delete('diary');
 end
 %Clean global
-global inputOut;
-clear inputOut;
+clearvars -global inputOut
+clear input;
 end
 
 function teardownOnce(testCase)  % do not change function name

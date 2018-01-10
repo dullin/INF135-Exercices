@@ -12,10 +12,8 @@
 clear
 clc
 
-% Saisit le poids de l'individu.
+% Saisit le poids et la taille de l'individu.
 poids = input('Veuillez entrer votre poids (en kg.): ');
-
-% Saisit la taille de l'individu.
 taille = input('Veuillez entrer votre taille (en m.): ');
     
 % Calcule l'IMC.

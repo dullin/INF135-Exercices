@@ -10,7 +10,7 @@ E9MinimumEntreDeux
 diary('off')
 text = fileread('diary');
 expected = ['Plus petit : 3' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[3,5]',expected, text);
 end
 
@@ -22,7 +22,7 @@ E9MinimumEntreDeux
 diary('off')
 text = fileread('diary');
 expected = ['Plus petit : 7' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[12, 7]',expected, text);
 end
 
@@ -34,7 +34,7 @@ E9MinimumEntreDeux
 diary('off')
 text = fileread('diary');
 expected = ['Plus petit : 5.5' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[5.5, 5.7]',expected, text);
 end
 
@@ -46,7 +46,7 @@ E9MinimumEntreDeux
 diary('off')
 text = fileread('diary');
 expected = ['Plus petit : -4' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[-4, 12]',expected, text);
 end
 
@@ -58,7 +58,7 @@ E9MinimumEntreDeux
 diary('off')
 text = fileread('diary');
 expected = ['Plus petit : 0' newline];
-cmp = strcmp(text,expected);
+cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[10,0]',expected, text);
 end
 
@@ -70,8 +70,8 @@ if exist('diary', 'file')
     delete('diary');
 end
 %Clean global
-global inputOut;
-clear inputOut;
+clearvars -global inputOut
+clear input;
 end
 
 function teardownOnce(testCase)  % do not change function name

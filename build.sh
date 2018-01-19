@@ -32,4 +32,6 @@ mkdir -p pcode
 mv *.p pcode/
 rm ../$1_win.zip
 zip -FS -X -r ../$1_win.zip pcode source test -x "*.DS_Store"
-zip -u -X -j ../$1_win.zip ../../enonce/$1.pdf -x "*.DS_Store"
+cd ..
+cd ..
+zip -u -X -j bin/$1_win.zip enonce/$1.pdf -x "*.DS_Store"

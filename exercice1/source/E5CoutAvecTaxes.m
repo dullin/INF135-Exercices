@@ -1,7 +1,7 @@
 % Calcule le prix à payer sur un article achetés plusieurs foix incluant
 % les taxes. Le script saisit le nombre d'articles achetés et le prix de
 % l'article acheté. La script affiche ensuite le prix total en ajoutant une
-% taxe de vente de 13%. L'affichage prends la forme "Prix total : PRIX"
+% taxe de vente de 13\%. L'affichage prends la forme "Prix total : PRIX"
 % suivi d'un saut de ligne. L'affichage du prix inclus seulement deux
 % décimales.
 

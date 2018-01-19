@@ -1,13 +1,13 @@
-function tests = E1Test
+function tests = E6Test
 tests = functiontests(localfunctions);
 end
 
 function test1(testCase)
 diary('on')
-E1AlloMonde
+E6ForSimple
 diary('off')
 text = fileread('diary');
-expected = ['Allo monde !' char(10)];
+expected = ' 1 2 3 4 5 6 7 8 9 10 10 9 8 7 6 5 4 3 2 1 0 -1 -2 -3 -4 -5 -6 -7 -8 -9 -10 -11 -12 -13 -14 -15 -16 -17 -18 -19 -20 100 105 110 115 120 125 130 135 140 145 150 155 160 165 170 175 180 185 190 195 200 -100 -50 0 50 100';
 cmp = strcmplazy(text,expected);
 assert(cmp,'Expected : %s Got: %s',expected, text);
 end

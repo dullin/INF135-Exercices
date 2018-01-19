@@ -1,15 +1,41 @@
-function tests = E1Test
+function tests = E3Test
 tests = functiontests(localfunctions);
 end
 
 function test1(testCase)
+global inputOut;
+inputOut = [4 10 3];
 diary('on')
-E1AlloMonde
+E5CompteurBorne
 diary('off')
 text = fileread('diary');
-expected = ['Allo monde !' char(10)];
+expected = '4 7 10';
 cmp = strcmplazy(text,expected);
-assert(cmp,'Expected : %s Got: %s',expected, text);
+assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s',10,expected, text);
+end
+
+function test2(testCase)
+global inputOut;
+inputOut = [1 10 2];
+diary('on')
+E5CompteurBorne
+diary('off')
+text = fileread('diary');
+expected = '1 3 5 7 9';
+cmp = strcmplazy(text,expected);
+assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s',-15,expected, text);
+end
+
+function test3(testCase)
+global inputOut;
+inputOut = [234 372 58];
+diary('on')
+E5CompteurBorne
+diary('off')
+text = fileread('diary');
+expected = '234 292 350';
+cmp = strcmplazy(text,expected);
+assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s',0,expected, text);
 end
 
 function setupOnce(testCase)  % do not change function name
@@ -19,7 +45,7 @@ addpath('stubs','../')
 if exist('diary', 'file')
     delete('diary');
 end
-%Clean global and persistent
+%Clean global
 clearvars -global inputOut
 clear input;
 end

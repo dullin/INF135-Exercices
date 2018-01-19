@@ -9,7 +9,7 @@ diary('on')
 E6NomEtPrenom
 diary('off')
 text = fileread('diary');
-expected = ['Bonjour George Bob !' newline];
+expected = ['Bonjour George Bob !' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','{''Bob'', ''''}',expected, text);
 end
@@ -21,7 +21,7 @@ diary('on')
 E6NomEtPrenom
 diary('off')
 text = fileread('diary');
-expected = ['Bonjour Roger !' newline];
+expected = ['Bonjour Roger !' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s','{''Roger'', ''''}',expected, text);
 end
@@ -33,7 +33,7 @@ diary('on')
 E6NomEtPrenom
 diary('off')
 text = fileread('diary');
-expected = ['Bonjour  !' newline];
+expected = ['Bonjour  !' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s','{'''',''''}',expected, text);
 end

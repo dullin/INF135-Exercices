@@ -9,7 +9,7 @@ diary('on')
 E5CoutAvecTaxes
 diary('off')
 text = fileread('diary');
-expected = ['Prix total : 1.13' newline];
+expected = ['Prix total : 1.13' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[1, 1]',expected, text);
 end
@@ -21,7 +21,7 @@ diary('on')
 E5CoutAvecTaxes
 diary('off')
 text = fileread('diary');
-expected = ['Prix total : 27.66' newline];
+expected = ['Prix total : 27.66' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s','[2, 12.24]',expected, text);
 end
@@ -33,7 +33,7 @@ diary('on')
 E5CoutAvecTaxes
 diary('off')
 text = fileread('diary');
-expected = ['Prix total : 0.00' newline];
+expected = ['Prix total : 0.00' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s','[0, 0]',expected, text);
 end

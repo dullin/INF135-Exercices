@@ -1,33 +1,28 @@
-%determinee si un nombre est premier.
+% Saisit un nombre et affiche si ce nombre est premier. Un nombre premier
+% à seulement 1 et lui-même comme diviseur. L'affichage prendre la forme
+% "NOMBRE est premier" ou "NOMBRE pas premier."
 
 % Vide la fenêtre de commande et la mémoire.
 clc
 clear
 
-nombre = input('Le nombre a regarder : ');
+saisi = input('Le nombre a regarder : ');
 
-% on suppose que le nombre est premier en partant
-resultat = 1;
+% Suppose un nombre premier
+estPremier = 1;
 
-
-% lance la boucle
-for ii=2:nombre-1
-    
-    % sera vrai s'il s'agit d'un diviseur.
-    if ~mod(nombre,ii)
-        
-        % le nombre n'est pas premier, ajuste le parametre de retour
-        resultat = 0;
-        
+% Test tous les nombre autres que 1 et le nombre saisi.
+for i=2:saisi-1
+    % Test si le nombre est un diviseur.
+    if ~mod(saisi,i)
+        % Le nombre n'est pas premier si on trouve un diviseur.
+        estPremier = 0;
     end
-    
-    
-    
 end
 
-%On affiche si le nombre est premier ou pas
-if resultat
-    fprintf('Le nombre est premier\n')
+% Affiche si le nombre est premier ou pas.
+if estPremier
+    fprintf('%g est premier.\n', saisi)
 else
-    fprintf('Le nombre n''est pas premier\n')
+    fprintf('%g pas premier.\n', saisi)
 end

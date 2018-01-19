@@ -4,10 +4,10 @@ end
 
 function test1(testCase)
 diary('on')
-E1AlloMonde
+E4CompteurImpaire
 diary('off')
 text = fileread('diary');
-expected = ['Allo monde !' char(10)];
+expected = '1 3 5 7 9';
 cmp = strcmplazy(text,expected);
 assert(cmp,'Expected : %s Got: %s',expected, text);
 end

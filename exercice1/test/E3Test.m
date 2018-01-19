@@ -9,7 +9,7 @@ diary('on')
 E3DoubleDuNombre
 diary('off')
 text = fileread('diary');
-expected = ['Double du nombre : 20' newline];
+expected = ['Double du nombre : 20' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s',10,expected, text);
 end
@@ -21,7 +21,7 @@ diary('on')
 E3DoubleDuNombre
 diary('off')
 text = fileread('diary');
-expected = ['Double du nombre : -30' newline];
+expected = ['Double du nombre : -30' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s',-15,expected, text);
 end
@@ -33,7 +33,7 @@ diary('on')
 E3DoubleDuNombre
 diary('off')
 text = fileread('diary');
-expected = ['Double du nombre : 0' newline];
+expected = ['Double du nombre : 0' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s',0,expected, text);
 end
@@ -45,7 +45,7 @@ diary('on')
 E3DoubleDuNombre
 diary('off')
 text = fileread('diary');
-expected = ['Double du nombre : 1.4' newline];
+expected = ['Double du nombre : 1.4' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %g\nExpected : %s\nGot: %s',0.7,expected, text);
 end

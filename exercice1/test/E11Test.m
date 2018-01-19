@@ -9,7 +9,7 @@ diary('on')
 E11IMC
 diary('off')
 text = fileread('diary');
-expected = ['Catégorie IMC : normale' newline];
+expected = ['Catégorie IMC : normale' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[68, 1.65]',expected, text);
 end
@@ -21,7 +21,7 @@ diary('on')
 E11IMC
 diary('off')
 text = fileread('diary');
-expected = ['Catégorie IMC : maigre' newline];
+expected = ['Catégorie IMC : maigre' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[53, 1.78]',expected, text);
 end
@@ -33,7 +33,7 @@ diary('on')
 E11IMC
 diary('off')
 text = fileread('diary');
-expected = ['Catégorie IMC : obèse' newline];
+expected = ['Catégorie IMC : obèse' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[105, 1.78]',expected, text);
 end

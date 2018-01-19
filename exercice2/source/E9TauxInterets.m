@@ -1,21 +1,25 @@
-%montant final d'un placement sous interets.                                                             *
+% Calcule un placement. Saisi un montant initial, un taux d'intérêts et une durée. Calcule le
+% montant final avec la formule suivante : \[montantFinal =
+% montantInitial(1+tauxInteret)^{duree}\]Il est interdit d'utiliser
+% l'exposant pour calculer me montant final, utilisez une boucle.
 
 % Vide la fenêtre de commande et la mémoire.
 clc
 clear
 
-montant_initial = input('Le montant initial : ');
-taux_interets = input('Le taux d''interets : ');
+% Saisit du montant initial, des intérêts et de la durée.
+montantInitial = input('Le montant initial : ');
+tauxInterets = input('Le taux d''interets : ');
 duree = input('La duree : ');
 
+% Initialise le montant finale.
+montantFinal = montantInitial;
 
-% initialise le montant finale
-montant_final = montant_initial;
-
-% calcule le montant finale de facon iterative en multipliant les taux d'interets
-for ii=1:duree
-  montant_final = montant_final*(1+taux_interets);
+% Calcule le montant finale de facon itérative en multipliant les taux
+% d'intérêts.
+for i=1:duree
+  montantFinal = montantFinal*(1+tauxInterets);
 end
 
-%On affiche le montant final
-fprintf('Le montant final est : %g\n',montant_final)
+% Affiche le montant final
+fprintf('Le montant final est : %.2f$\n',montantFinal)

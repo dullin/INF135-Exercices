@@ -1,4 +1,7 @@
-%Compteur avec depassement
+% Saisit un nombre limite. Initialise un compteur à 0 et utilise un while
+% qui incrémente le compteur de deux à chaque itération. Le compteur
+% s'arrète quand le compteur à dépassé le nombre limite. Affichez la valeur
+% du compteur à la fin de chaque itération de la boucle.
 
 % Vide la fenêtre de commande et la mémoire.
 clc
@@ -15,5 +18,5 @@ while(compteur <= limite)
     compteur = compteur + 2;
     
     % Affiche l'état du compteur.
-    fprintf('%i\n', compteur);
+    fprintf('%g\n', compteur);
 end

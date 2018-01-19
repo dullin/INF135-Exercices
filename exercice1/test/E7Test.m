@@ -9,7 +9,7 @@ diary('on')
 E7MultiplieDeuxNombres
 diary('off')
 text = fileread('diary');
-expected = ['3 x 4 = 12' newline];
+expected = ['3 x 4 = 12' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[3,4]',expected, text);
 end
@@ -21,7 +21,7 @@ diary('on')
 E7MultiplieDeuxNombres
 diary('off')
 text = fileread('diary');
-expected = ['1.5 x 2.7 = 4.05' newline];
+expected = ['1.5 x 2.7 = 4.05' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[1.5,2.7]',expected, text);
 end
@@ -33,7 +33,7 @@ diary('on')
 E7MultiplieDeuxNombres
 diary('off')
 text = fileread('diary');
-expected = ['10 x 0 = 0' newline];
+expected = ['10 x 0 = 0' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[10,0]',expected, text);
 end

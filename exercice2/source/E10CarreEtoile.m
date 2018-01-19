@@ -1,18 +1,19 @@
-%affiche un carre d'etoile a l'ecran.
+% Saisit la dimension d'un carré. Affiche un carré d'étoile (*) à l'écran
+% avec un nombre de ligne et un nombre de colonnes déterminé par la saisit.
 
 % Vide la fenêtre de commande et la mémoire.
 clc
 clear
 
-%On saisit la dimension du carre d'etoiles
+% Saisit la dimension du carre d'etoiles.
 dimension = input('Quel est la dimension du carre : ');
 
-%On fait un boucle pour chaque ligne
-for ii=1:dimension
-    % place le nombre d'etoile sur une ligne
-    for jj=1:dimension
+% Pour chaque ligne.
+for i=1:dimension
+    % Affiche les étoiles d'une ligne.
+    for j=1:dimension
         fprintf('*');
     end
-    % saute une ligne
+    % Saut de ligne après chaque ligne d'étoiles.
     fprintf('\n');
 end

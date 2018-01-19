@@ -9,7 +9,7 @@ diary('on')
 E9MinimumEntreDeux
 diary('off')
 text = fileread('diary');
-expected = ['Plus petit : 3' newline];
+expected = ['Plus petit : 3' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[3,5]',expected, text);
 end
@@ -21,7 +21,7 @@ diary('on')
 E9MinimumEntreDeux
 diary('off')
 text = fileread('diary');
-expected = ['Plus petit : 7' newline];
+expected = ['Plus petit : 7' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[12, 7]',expected, text);
 end
@@ -33,7 +33,7 @@ diary('on')
 E9MinimumEntreDeux
 diary('off')
 text = fileread('diary');
-expected = ['Plus petit : 5.5' newline];
+expected = ['Plus petit : 5.5' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[5.5, 5.7]',expected, text);
 end
@@ -45,7 +45,7 @@ diary('on')
 E9MinimumEntreDeux
 diary('off')
 text = fileread('diary');
-expected = ['Plus petit : -4' newline];
+expected = ['Plus petit : -4' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[-4, 12]',expected, text);
 end
@@ -57,7 +57,7 @@ diary('on')
 E9MinimumEntreDeux
 diary('off')
 text = fileread('diary');
-expected = ['Plus petit : 0' newline];
+expected = ['Plus petit : 0' char(10)];
 cmp = strcmplazy(text,expected);
 assert(cmp,'Testing input : %s\nExpected : %s\nGot: %s','[10,0]',expected, text);
 end

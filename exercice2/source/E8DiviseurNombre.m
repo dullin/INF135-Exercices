@@ -1,21 +1,22 @@
-%saisit un nombre entier au clavier et afficher tous les diviseurs de ce nombre.
+% Saisit un nombre et affiche tous les diviseurs de ce nombre. Note : La
+% fonction mod permet d'aider à trouver si un nombre est un diviseur d'un
+% autre.
 
 % Vide la fenêtre de commande et la mémoire.
 clc
 clear
 
-% On saisit le nombre entier.
-entier_saisi = input('Veuillez entrer un nombre entier: ');
+% Saisit le nombre entier.
+saisi = input('Veuillez entrer un nombre entier: ');
 
-% Le preambule du message qui sera affiche.
-fprintf('Les diviseurs du nombre %g sont:\n',entier_saisi);
+% Début du message.
+fprintf('Les diviseurs du nombre %g sont:\n',saisi);
 
-% Un diviseur est par definition compris dans l'intervale [1..entier_saisi].
-% On enumere tous les nombre de cet interval et on determine pour chacun s'il est un
-% diviseur de l'entier saisi.
-for un_entier = 1:entier_saisi
-    if (0 == mod(entier_saisi, un_entier))
-        fprintf('\t%g\n', un_entier);
+% Parcours tous les nombre entre 1 et la saisi.
+for i = 1:saisi
+    % Test pour savoir si c'est une diviseur du nombre et l'affiche.
+    if mod(saisi, i) == 0
+        fprintf('%g\n', i);
     end
 end
 

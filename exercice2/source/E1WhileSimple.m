@@ -1,4 +1,6 @@
-%Exercice de compteur simple
+% Initialise un compteur à 0. Avec une boucle while, la boucle while
+% incrémente le compteur tant que la valeur est plus petite que 10. Affiche
+% le compteur après la boucle.
 
 % Vide la fenêtre de commande et la mémoire.
 clc

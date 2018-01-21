@@ -9,7 +9,7 @@ clear
 % Saisit le maximum, minimum et l'intervalle.
 minimum = input('Entrez le minimum : ');
 maximum = input('Entrez le maximum : ');
-intervalle = input('Entrez le intervalle : ');
+intervalle = input('Entrez l''intervalle : ');
 
 % Initialise le compteur au minimum.
 compteur = minimum;

@@ -1,0 +1,54 @@
+\documentclass{exam}
+    \usepackage{matlab-prettifier}
+    %\usepackage[twocolumn]{geometry}
+%Spacing for functions
+\usepackage{titlesec}
+\usepackage{enumitem}
+\setlist[description]{nosep,labelindent=1em}
+    \usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+    \usepackage{algpseudocode}
+\usepackage{algorithm}
+    \setlist[description]{nosep,labelindent=1em}
+    
+    \lstset{style=Matlab-bw,aboveskip=0.6pt,belowskip=-0.4pt}
+    
+    %Reduce spacing for subsection
+    \titlespacing\subsection{0pt}{-1pt}{-1pt}
+    %Header config
+    \pagestyle{head}
+    \extrafootheight{-.75in}
+    \header{INF-135}{Création de fonctions}{Exercices 3}
+    
+    \qformat{\textbf{Exercice \thequestion}\quad \thequestiontitle\hfill}
+    \begin{document}
+    \begin{questions}
+            %Reduce spacing for subsection
+    \titlespacing{\subsubsection}{0pt}{-1pt}{-1pt}
+    \titlespacing{\subsection}{0pt}{0pt}{0pt}
+        \titledquestion{Compteur entre bornes}
+        \input{./source/E1CompteurEntreBorne.tex}
+        \titledquestion{Inverser signe}
+        \input{./source/E2InverserSigne.tex}          
+        \titledquestion{Inverse}
+        \input{./source/E3Inverse.tex}
+        \titledquestion{Factoriel}
+        \input{./source/E4Factoriel.tex}
+        \titledquestion{Saisi entre bornes}
+        \input{./source/E5SaisitEntreBorne.tex}
+        \titledquestion{Maximum de ...}
+        \input{./source/E6MaximumDeDeux.tex}
+
+        \input{./source/E6MaximumDeTrois.tex}
+
+        \input{./source/E6MaximumDeQuatre.tex}
+        \titledquestion{PGCD (Plus grand commun diviseur)}
+        \input{./source/E7PGCD.tex}
+        \titledquestion{Est premier}
+        \input{./source/E8EstPremier.tex}
+        \titledquestion{N nombres premiers}
+        \input{./source/E9nNombrePremier.tex}
+        \titledquestion{Nombre de diviseurs}
+        \input{./source/E10NombreDeDiviseur.tex}
+        
+    \end{questions}
+\end{document}

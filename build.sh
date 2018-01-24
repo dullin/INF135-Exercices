@@ -5,10 +5,10 @@ if [[ $# -eq 0 ]] ; then
     exit 0
 fi
 
-source ../MATLAB-Header-Generator/venv/bin/activate
-python3 ../MATLAB-Header-Generator/main.py $1/source --latex
-rm -rf $1/enonce/source
-mv $1/source/latex/ $1/enonce/source
+# source ../MATLAB-Header-Generator/venv/bin/activate
+# python3 ../MATLAB-Header-Generator/main.py $1/source --latex
+# rm -rf $1/enonce/source
+# mv $1/source/latex/ $1/enonce/source
 
 #MATLAB Mac Path
 export PATH=$PATH:/Applications/MATLAB_R2017b.app/bin/

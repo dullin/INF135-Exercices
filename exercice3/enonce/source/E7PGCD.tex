@@ -1,0 +1,21 @@
+\begin{minipage}{\linewidth}
+\subsection*{E7PGCD}
+\subsubsection*{Syntaxe}
+\begin{lstlisting}
+[plusGrandDiviseur] = E7PGCD(a, b)
+\end{lstlisting}
+\subsubsection*{Description}
+commun diviseur entre deux nombre. Utlisier l'algorithme suivant ou le chapeau représente un \&\& et la flèche une assignation: \begin{algorithmic} \While{$a \neq b \land b \neq 0$} \If{$a > b$} \State $a \gets a-b$ \Else \State $b \gets b-a$ \EndIf \EndWhile \If{$a=0$} return b \Else return a \EndIf \end{algorithmic}
+\subsubsection*{Entrées}
+\begin{description}
+\item a [double] - Première valeur. 
+\item b [double] - Deuxième valeur. 
+\end{description} \subsubsection*{Sorties}
+\begin{description}
+\item plusGrandDiviseur [double] - Plus grand diviseur des deux nombres. 
+\end{description} 
+\subsubsection*{Exemple}
+\begin{lstlisting}
+E7PGCD(12, 8) % Retourne 4
+\end{lstlisting} \medskip
+\end{minipage}

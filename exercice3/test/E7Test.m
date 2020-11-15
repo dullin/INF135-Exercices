@@ -1,5 +1,0 @@
-assert(E7PGCD(12, 20) == 4)
-assert(E7PGCD(172,140) == 4)
-assert(E7PGCD(12, 20) == 4)
-assert(E7PGCD(1720, 14050) == 10)
-assert(E7PGCD(810,3780) == 270)

@@ -1,0 +1,149 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[french]{article}
+
+\usepackage{exsheets}
+\usepackage{fontspec,xltxtra,xunicode}
+\usepackage{fancyhdr}
+\usepackage[framed]{matlab-prettifier}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyhead[C]{Révision Intra}
+\fancyfoot[C]{INF-135}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{INF-135}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}}
+
+\SetupExSheets{headings = block-subtitle}
+\SetupExSheets{question/type=exam}
+\SetupExSheets{solution/print=true}
+\SetupExSheets{points/name = {minute/s}}
+
+\begin{document}
+\thispagestyle{plain}
+\noindent\makebox[\textwidth][c]{\Huge\textbf{Révision Intra}}
+
+
+\renewcommand{\abstractname}{Instructions}
+\begin{abstract}
+	Complétez chaque exercices du document à l’aide des notions vues en classe. Complétez chaque exercice dans le temps alloué. Faites les exercices sur papier pour vous pratiquer à l'environnement de l'examen.
+\end{abstract}
+\bigskip
+
+\begin{question}{6}
+	Écrivez un script qui saisit un nombre au clavier et affiche tous les chiffres de ce nombre l'un après l'autre. Assumez que la valeur saisie sera un nombre entier positif.
+\end{question}
+\vfill
+\begin{solution}
+	\lstinputlisting[style=Matlab-editor]{afficheChiffre.m}
+\end{solution}
+\newpage
+
+\begin{question}{5}
+	Écrivez une fonction qui reçoit trois nombres. Le premier est une valeur à tester et les deux autres sont les limites minimum et maximum d'un intervalle. La fonction retourne vrai si la valeur à tester est à l'intérieur de l'intervalle donné. Validez que les paramètres sont des entités numériques avec la fonction isnumeric.
+	Écrivez ensuite un script de test qui va tester l'utilisation de la fonction précédente en utilisant la fonction assert. Faites deux tests à l'intérieur du script de test.
+\end{question}
+\vfill
+\begin{solution}
+	\lstinputlisting[style=Matlab-editor]{estDansIntervalle.m}
+	\lstinputlisting[style=Matlab-editor]{estDansIntervalleTest.m}
+\end{solution}
+\newpage
+
+\begin{question}{6}
+	Écrivez une fonction qui reçoit un nombre entier positif et affiche tous les diviseurs de ce nombre.
+	Écrivez ensuite un script qui saisit un nombre et affiche tous les diviseurs de ce nombre en utilisant la fonction créée précédemment.
+\end{question}
+\vfill
+\begin{solution}
+	\lstinputlisting[style=Matlab-editor]{afficheDiviseur.m}
+	\lstinputlisting[style=Matlab-editor]{afficheDiviseurScript.m}
+\end{solution}
+\newpage
+
+\begin{question}{6}
+	Écrivez une fonction qui reçoit deux nombres entiers positifs et retourne le nombre de diviseurs communs à ces deux nombres. À titre d’exemple, les nombres 8 et 12 possèdent 3 diviseurs communs (1, 2 et 4).
+\end{question}
+\vfill
+\begin{solution}
+	\lstinputlisting[style=Matlab-editor]{nDiviseurCommun.m}
+\end{solution}
+\newpage
+
+\begin{question}{5}
+	Le nombre Pi peut être calculé à l'aide de la série suivante : 
+	\[ \sqrt{12}\sum_{k=0}^{\infty}\frac{(-3)^{-k}}{2k+1}\]
+	Écrivez un script qui approxime la valeur de Pi en effectuant la somme des 1000 premiers termes de la série ci-dessus et qui affiche la valeur obtenue.
+\end{question}
+\vfill
+\begin{solution}
+	\lstinputlisting[style=Matlab-editor]{approximationPi.m}
+\end{solution}
+\newpage
+
+\begin{question}{7}
+	Écrivez une fonction qui reçoit un nombre de dés n, simule le lancé de n dés à 6 faces et retourne un tableau des valeurs lancés.\\
+Indice : La fonction randi(X) retourne un nombre entier aléatoire entre 1 et X.
+\end{question}
+\vfill
+\begin{solution}
+	\lstinputlisting[style=Matlab-editor]{lancerND6.m}
+\end{solution}
+\newpage
+
+\begin{question}{7}
+	Écrivez une fonction qui reçoit un nombre de dés n, simule le lancé de n dés à 6 faces et retourne le nombre de 6 obtenus.\\
+\end{question}
+\vfill
+\begin{solution}
+	\lstinputlisting[style=Matlab-editor]{n6SurND6.m}
+\end{solution}
+\newpage
+
+\begin{question}{7}
+	Écrivez une fonction qui reçoit un tableau de nombres, un nombre minimum et un nombre maximum. La fonction retourne le nombre de valeurs du tableau entre le minimum et le maximum.
+\end{question}
+\vfill
+\begin{solution}
+	\lstinputlisting[style=Matlab-editor]{nDansIntervalle.m}
+\end{solution}
+\newpage
+
+\begin{question}{7}
+	Écrivez une fonction qui reçoit un tableau de nombres, un nombre minimum et un nombre maximum. La fonction retourne un tableau des valeurs du tableau initiale entre le minimum et le maximum.
+\end{question}
+\vfill
+\begin{solution}
+	\lstinputlisting[style=Matlab-editor]{dansIntervalle.m}
+\end{solution}
+\newpage
+
+\begin{question}{10}
+	Écrivez une fonction qui reçoit un tableau de nombres réels et une valeur limite. Elle retourne le nombre de valeurs dans le tableau supérieures ou égales à la valeur limite et la moyenne de ces valeurs.
+\end{question}
+\vfill
+\begin{solution}
+	\lstinputlisting[style=Matlab-editor]{nSuperieurMoyenne.m}
+\end{solution}
+
+\newpage
+\begin{question}{10}
+	Écrivez une fonction qui détermine si une lettre est une voyelle. Faire attention à la casse.
+\end{question}
+\vfill
+\begin{solution}
+	\lstinputlisting[style=Matlab-editor]{estVoyelle.m}
+\end{solution}
+
+\newpage
+
+
+\end{document}  

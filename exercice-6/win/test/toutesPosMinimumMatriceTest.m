@@ -1,0 +1,1 @@
+assert(isequal(toutesPosMinimumMatrice([1, 5, 6;1, 3, 7]), [1 1; 2 1]))

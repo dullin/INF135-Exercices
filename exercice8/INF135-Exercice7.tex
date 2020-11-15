@@ -1,0 +1,77 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass{article}
+
+\usepackage{exsheets}
+\usepackage{fontspec,xltxtra,xunicode}
+\usepackage{fancyhdr}
+\usepackage[framed]{matlab-prettifier}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyhead[C]{Exercice de la semaine 7}
+\fancyfoot[C]{INF-135}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{INF-135}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}}
+
+\SetupExSheets{headings = block-subtitle}
+
+\begin{document}
+\thispagestyle{plain}
+\noindent\makebox[\textwidth][c]{\Huge\textbf{Semaine 6}}
+
+\renewcommand{\abstractname}{Instructions}
+\begin{abstract}
+	Complété chaque exercice du document à l’aide des notions vues en classe.
+Après avoir complété un exercice, vérifié la solution fournie. Vous pouvez exécuter les versions p-code pour avoir une démonstration de l’exécution des solutions.
+\end{abstract}
+
+Les prochaines questions traite des informations sur des joueurs de hockey. Les joueurs sont regroupés par club. Pour chaque joueur, le programme traite les informations suivantes :
+\begin{itemize}
+	\setlength\itemsep{0em}
+	\item nom
+	\item prénom
+	\item club
+	\item nombre de parties jouées
+	\item nombre de buts
+	\item nombre de passes
+	\item nombre de points
+	\item +/-
+\end{itemize}
+
+\begin{question}[subtitle={Lire Joueurs}]
+	Écrivez une fonction qui saisit le nombre de joueurs et saisit ensuite les informations sur les joueurs et enregistre dans un tableau d'enregistrement de joueurs ces informations. Elle retourne le tableau contenant les joueurs.
+\end{question}
+
+\begin{question}[subtitle={Affiche joueur}]
+	Écrivez une fonction qui affiche toutes les informations du joueur reçu en paramètre.
+\end{question}
+
+\begin{question}[subtitle={Meilleur Joueur}]
+	Écrivez une fonction qui retourne le meilleur joueur du tableau. Le meilleur joueur est celui qui a le plus de points. En cas d'égalité, elle retourne le dernier joueur rencontré.
+\end{question}
+
+\begin{question}[subtitle={Infos Club}]
+	Écrivez une fonction qui affiche les informations concernant chacun des clubs d'un tableau de joueurs. Les informations suivantes sont écrites :
+\begin{itemize}
+	\setlength\itemsep{0em}
+	\item Le nom du club
+	\item La somme des buts comptés par le club.
+	\item La somme des passes effectuées par le club.
+	\item La somme des points du club.
+\end{itemize}
+\end{question}
+
+\begin{question}[subtitle={Hockey}]
+	Écrivez une fonction qui lit au clavier les informations des joueurs et les copie dans un tableau de joueurs. Il affiche ensuite toutes les informations du meilleur joueur. Enfin, des informations sur chacun des clubs sont affichées à l'écran.
+\end{question}
+
+\end{document}  

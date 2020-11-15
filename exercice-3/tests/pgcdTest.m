@@ -1,0 +1,5 @@
+assert(pgcd(12, 20) == 4)
+assert(pgcd(172,140) == 4)
+assert(pgcd(12, 20) == 4)
+assert(pgcd(1720, 14050) == 10)
+assert(pgcd(810,3780) == 270)

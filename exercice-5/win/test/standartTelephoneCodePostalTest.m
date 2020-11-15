@@ -1,0 +1,1 @@
+assert(strcmp(standartTelephoneCodePostal('j3L 2X4'), 'J3L2X4'))

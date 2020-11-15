@@ -1,0 +1,103 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[french]{article}
+
+    \usepackage{exsheets}
+    \usepackage{fontspec,xltxtra,xunicode}
+    \usepackage{fancyhdr}
+    \usepackage[framed]{matlab-prettifier}
+    \pagestyle{fancy}
+    \fancyhf{} % clear all header and footer fields
+    \fancyhead[C]{Révision Intra 2}
+    \fancyfoot[C]{INF-135}
+    \fancyfoot[R]{\thepage}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+    
+    \fancypagestyle{plain}{%
+    \fancyhf{} % clear all header and footer fields
+    \fancyfoot[C]{INF-135}
+    \fancyfoot[R]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0.4pt}}
+    
+    \SetupExSheets{headings = block-subtitle}
+    \SetupExSheets{question/type=exam}
+    \SetupExSheets{solution/print=true}
+    \SetupExSheets{points/name = {minute/s}}
+    
+    \begin{document}
+    \thispagestyle{plain}
+    \noindent\makebox[\textwidth][c]{\Huge\textbf{Révision Intra 2}}
+    
+    
+    \renewcommand{\abstractname}{Instructions}
+    \begin{abstract}
+        Complétez chaque exercices du document à l’aide des notions vues en classe. Complétez chaque exercice dans le temps alloué. Faites les exercices sur papier pour vous pratiquer à l'environnement de l'examen.
+    \end{abstract}
+    \bigskip
+    
+    \begin{question}{6}
+        Écrivez une fonction qui reçoit une lettre (une chaîne de caractères) et retourne True si cette lettre est une voyelle et False dans le cas contraire. Rappelons qu’en français les lettres « a », « e », « i », « o », « u » et « y » sont des voyelles.
+    \end{question}
+    \vfill
+    \begin{solution}
+        \lstinputlisting[style=Matlab-editor]{q5_est_une_voyelle.m}
+    \end{solution}
+    \newpage
+    \begin{question}{6}
+        Écrivez une fonction qui compte le nombre de consonnes dans une phrase. Notons qu’une consonne est une lettre qui n’est pas une voyelle.
+    \end{question}
+    \vfill
+    \begin{solution}
+        \lstinputlisting[style=Matlab-editor]{q6_nb_consonnes.m}
+    \end{solution}
+    \newpage
+    \begin{question}{10}
+        Écrivez une fonction qui reçoit en paramètre deux chaine de caractères. La première chaine sera la chaine à vérifier et la deuxième chaine est une liste de lettre a trouver dans la première. La fonction retourne un tableau du nombre d'occurrences de chaque lettre de la deuxième chaine se retrouvant dans la première.
+    \end{question}
+    \vfill
+    \begin{solution}
+        \lstinputlisting[style=Matlab-editor]{q1_occurences.m}
+    \end{solution}
+    \newpage
+    \begin{question}{12}
+        Écrivez une fonction qui reçoit un tableau de deux dimensions, un indice de ligne et un indice de colonne. La fonction calcule la moyenne locale de la case donnée. La moyenne locale est la moyenne des valeurs des cases adjecentes à celle-ci.
+    \end{question}
+    \vfill
+    \begin{solution}
+        \lstinputlisting[style=Matlab-editor]{q2_moyenneLocale.m}
+    \end{solution}
+    \newpage
+    \begin{question}{10}
+    Écrire une fonction qui reçoit un tableau de deux dimension. La fonction retourne un tableau de deux dimensions avec la moyenne locale de chaque cases.
+    \end{question}
+    \vfill
+    \begin{solution}
+        \lstinputlisting[style=Matlab-editor]{q3_embrouillerImage.m}
+    \end{solution}
+    \newpage
+    \begin{question}{15}
+    Écrire une fonction qui reçoit deux paramètres : une chaine de caractères contenant plusieurs mot délimité par des espaces et une lettre à trouver dans les mots de la première chaine. La fonction retourne le nombre de mots contenant la lettre à trouver dans la liste de mot de la première chaine.
+    \\Indice : La fonction strtok permet de couper une chaine à un endroit précis et retourne les deux parties coupés.
+    \end{question}
+    \begin{lstlisting}
+    [tok, rest] = strtok('allo tout le monde')
+    tok = 'allo'
+    rest = ' tout le monde'
+    \end{lstlisting}
+    \vfill
+    \begin{solution}
+        \lstinputlisting[style=Matlab-editor]{q6_nbMotsAvecLettre.m}
+    \end{solution}
+    \newpage
+    \begin{question}{15}
+        Écrivez une fonction qui reçoit un tableau de valeurs et une valeur limite. La fonction calcule la moyenne des valeurs au dessus de la limite et la moyenne en dessous de la limite. La fonction retourne un enregistrement de deux champs, moyenneDessus et moyenneDessous.
+    \end{question}
+    \vfill
+    \begin{solution}
+        \lstinputlisting[style=Matlab-editor]{structmoy.m}
+    \end{solution}
+    \end{document}  
+    
